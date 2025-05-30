@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:projectimagefirb/application/constants/const_routes.dart';
 
 class ListaScreen extends StatelessWidget {
   const ListaScreen({super.key});
@@ -110,8 +111,8 @@ List<Product> demoProducts = [
       const Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "للزياره",
-    rating: '/doctor',
+    title: "دكاتره",
+    rating: ConstRoutes.doctor,
   ),
   Product(
     id: 2,
@@ -123,7 +124,7 @@ List<Product> demoProducts = [
       Colors.white,
     ],
     title: "حجز للزياره",
-    rating: '/rite',
+    rating: ConstRoutes.loginlista,
   ),
   Product(
     id: 3,
@@ -135,7 +136,7 @@ List<Product> demoProducts = [
       Colors.white,
     ],
     title: "للزياره",
-    rating: '/lift',
+    rating: ConstRoutes.showlist,
   ),
   Product(
     id: 4,
@@ -147,6 +148,6 @@ List<Product> demoProducts = [
       Colors.white,
     ],
     title: "تعديل النظام",
-    rating: '/setting',
+    rating: ConstRoutes.settings,
   ),
 ];

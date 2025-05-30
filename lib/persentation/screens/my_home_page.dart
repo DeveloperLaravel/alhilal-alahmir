@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:projectimagefirb/constants/constant.dart';
-import 'package:projectimagefirb/widgets/dot_indicator.dart';
-import 'package:projectimagefirb/widgets/onboard_content.dart';
+import 'package:projectimagefirb/application/constants/const_routes.dart';
+import 'package:projectimagefirb/application/constants/constant.dart';
+import 'package:projectimagefirb/persentation/widgets/dot_indicator.dart';
+import 'package:projectimagefirb/persentation/widgets/onboard_content.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -49,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/lista');
+                  Navigator.pushNamed(context, ConstRoutes.about);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFFFF1818),

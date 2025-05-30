@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:projectimagefirb/screens/Lista_screen.dart';
-import 'package:projectimagefirb/screens/my_home_page.dart';
+import 'package:projectimagefirb/application/constants/const_routes.dart';
+import 'package:projectimagefirb/route_generator.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -20,14 +20,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      routes: {
-        '/': (context) => MyHomePage(),
-        '/lista': (context) => ListaScreen(),
-        '/doctor': (context) => MyHomePage(),
-        '/setting': (context) => MyHomePage(),
-        '/lift': (context) => MyHomePage(),
-        '/rite': (context) => MyHomePage(),
-      },
+      initialRoute: ConstRoutes.home,
+      onGenerateRoute: RouteGenerator.generate,
     );
   }
 }
