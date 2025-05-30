@@ -1,0 +1,6 @@
+{
+    "java.project.sourcePaths": [
+        "lib/domain"
+    ],
+    "cmake.sourceDirectory": "E:/my_app/projectimagefirb/windows/flutter"
+}

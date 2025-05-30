@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:projectimagefirb/application/constants/const_routes.dart';
 import 'package:projectimagefirb/route_generator.dart';
 import 'firebase_options.dart';
+// import 'package:http/http.dart' as http;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
