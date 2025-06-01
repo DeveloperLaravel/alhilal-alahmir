@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:projectimagefirb/domain/models_product.dart';
+import 'package:projectimagefirb/core/product/domain/models_product.dart';
 
 class RepositoriesProduct {
   getProductDate() async {

@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:projectimagefirb/domain/models_rating.dart';
+import 'package:projectimagefirb/core/product/domain/models_rating.dart';
 
 class ModelsProduct extends Equatable {
   final int id;
@@ -28,7 +28,7 @@ class ModelsProduct extends Equatable {
       description: json['description'],
       category: json['category'],
       image: json['image'],
-      modelsRating: ModelsRating.fromJson(json['modelsRating']),
+      modelsRating: ModelsRating.fromJson(json['rating']),
     );
   }
 
