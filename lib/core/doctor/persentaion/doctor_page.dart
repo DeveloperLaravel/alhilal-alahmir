@@ -48,6 +48,10 @@ class _DoctorPageState extends State<DoctorPage> {
       appBar: AppBar(title: const Text('Page Doctor'), actions: [
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('add'),
+      ),
       body: FutureBuilder<List<ModelDoctor>>(
         future: doctor,
         // initialData: InitialData,
@@ -56,7 +60,7 @@ class _DoctorPageState extends State<DoctorPage> {
             return Container(
               width: double.infinity,
               child: Card(
-                elevation: 5,
+                elevation: 7,
                 child: ListView.builder(
                   itemCount: snapshot.data!.length,
                   itemBuilder: (context, index) {
@@ -68,7 +72,7 @@ class _DoctorPageState extends State<DoctorPage> {
               ),
             );
           }
-          return const CircularProgressIndicator();
+          return Center(child: const CircularProgressIndicator());
         },
       ),
     );
