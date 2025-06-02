@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:projectimagefirb/application/constants/const_routes.dart';
 import 'package:projectimagefirb/persentation/screens/Lista_screen.dart';
 import 'package:projectimagefirb/core/doctor/persentaion/doctor_page.dart';
-import 'package:projectimagefirb/persentation/screens/login_lista.dart';
+import 'package:projectimagefirb/core/login_lista/persention/login_lista.dart';
 import 'package:projectimagefirb/persentation/screens/my_home_page.dart';
 import 'package:projectimagefirb/persentation/screens/setteings_page.dart';
 import 'package:projectimagefirb/persentation/screens/show_lista.dart';
