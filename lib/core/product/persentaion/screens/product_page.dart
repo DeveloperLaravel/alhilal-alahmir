@@ -1,72 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:projectimagefirb/core/product/cubit/product_cubit.dart';
 
+/*
+"id": 3175,
+"title": "Seonbi : Scholar of Joseon (PC) Giveaway",
+"worth": "$6.99",
+"thumbnail": "https://www.gamerpower.com/offers/1/683c9a5156aa2.jpg",
+"image": "https://www.gamerpower.com/offers/1b/683c9a5156aa2.jpg",
+"description": "Download Seonbi : Scholar of Joseon via Stove Store! Seonbi : Scholar of Joseon is a 2D side-scrolling action rogue-lite game. Don´t miss it.",
+"instructions": "1. Click the button to visit the giveaway page.\r\n2. Login into your STOVE Store account.\r\n3. Click the button \"Cart\" to add the game to your library",
+"open_giveaway_url": "https://www.gamerpower.com/open/seonbi-scholar-of-joseon-pc-giveaway",
+"published_date": "2025-06-01 14:22:09",
+"type": "Game",
+"platforms": "PC",
+"end_date": "2025-06-08 23:59:00",
+"users": 3370,
+"status": "Active",
+"gamerpower_url": "https://www.gamerpower.com/seonbi-scholar-of-joseon-pc-giveaway",
+"open_giveaway": "https://www.gamerpower.com/open/seonbi-scholar-of-joseon-pc-giveaway"
+
+
+ */
 class ProductPage extends StatelessWidget {
   const ProductPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => ProductCubit()..getProductDate(),
-      child: Scaffold(
-        body: BlocBuilder<ProductCubit, ProductCubit>(
-          builder: (context, theme) {
-            switch (theme) {
-              case ProductLoading():
-                return CircularProgressIndicator();
-              case ProductLoaded():
-                return GridView.builder(
-                  padding: const EdgeInsets.all(10),
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 10,
-
-                    childAspectRatio: 0.7,
-                  ),
-                  itemCount: theme,
-                  itemBuilder: (context, index) {
-                    final product = theme.repositoriesProduct[index];
-                    return Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      elevation: 5,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Expanded(
-                            child: Image.network(
-                              product.image,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              product.title,
-                              textAlign: TextAlign.center,
-                              style: const TextStyle(
-                                fontSize: 16,
-                                color: Colors.green,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                );
-              case ProductError():
-                return Center(child: Text(theme.errorMessage.toString()));
-
-              default:
-            }
-            return Container();
-          },
-        ),
-      ),
-    );
+    return Scaffold(body: Center(child: Text('product')));
   }
 }
