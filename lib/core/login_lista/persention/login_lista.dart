@@ -17,6 +17,7 @@ class _LoginListaState extends State<LoginLista> {
     final response = await dio.get(
       'https://jsonplaceholder.typicode.com/posts',
     );
+    // ignore: avoid_print
     print(response.data.runtimeType);
   }
 
@@ -26,14 +27,16 @@ class _LoginListaState extends State<LoginLista> {
     );
 
     final a = jsonDecode(respons.body); // 1
+    // ignore: avoid_print
     print(a.runtimeType);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // ignore: avoid_unnecessary_containers
       floatingActionButton: Container(
-        child: Column(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             FloatingActionButton(

@@ -57,6 +57,7 @@ class _DoctorPageState extends State<DoctorPage> {
         // initialData: InitialData,
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           if (snapshot.hasData) {
+            // ignore: sized_box_for_whitespace
             return Container(
               width: double.infinity,
               child: Card(

@@ -1,7 +1,8 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:projectimagefirb/core/product/models/data_model.dart';
+
+import '../models/data_model.dart' show DataModel;
 
 class GamesRepo {
   Future<List<DataModel>?> getGamesDate() async {
@@ -12,7 +13,6 @@ class GamesRepo {
     } else {
       Iterable models = jsonDecode(result.body);
       List<DataModel> dataModels = [];
-
       for (var model in models) {
         DataModel dataModel = DataModel.fromJson(model);
         dataModels.add(dataModel);
